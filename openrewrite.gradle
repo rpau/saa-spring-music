@@ -1,0 +1,26 @@
+initscript {
+	repositories {
+		maven { url "https://plugins.gradle.org/m2" }
+	}
+	dependencies { classpath(System.getProperty("gradlePlugin")) }
+}
+rootProject {
+	plugins.apply(org.openrewrite.gradle.RewritePlugin)
+	dependencies {
+		def recipeArtifactCoordinatesList = project.findProperty("recipeArtifactCoordinates")?.split(',') ?: []
+		recipeArtifactCoordinatesList.each { rewrite(it) }
+	}
+	rewrite {
+		setFailOnInvalidActiveRecipes(true)
+
+		def activeRecipesList = project.findProperty("rewrite.activeRecipes")?.split(',') ?: []
+		activeRecipesList.each { activeRecipe(it) }
+	}
+	afterEvaluate {
+		if (repositories.isEmpty()) {
+			repositories {
+				mavenCentral()
+			}
+		}
+	}
+}
