@@ -5,10 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.cloudfoundry.samples.music.domain.ApplicationInfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +21,6 @@ public class InfoController {
 
     private Environment springEnvironment;
 
-    @Autowired
     public InfoController(Environment springEnvironment) {
         this.springEnvironment = springEnvironment;
         this.cfEnv = new CfEnv();

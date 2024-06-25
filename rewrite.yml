@@ -1,0 +1,394 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.1.org.openrewrite.java.migrate.UpgradeToJava17
+recipeList:
+  - org.openrewrite.java.migrate.UpgradeToJava17
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.2.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: org.springframework
+      artifactId: "*"
+      newVersion: 6.0.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.3.org.openrewrite.gradle.UpdateGradleWrapper
+recipeList:
+  - org.openrewrite.gradle.UpdateGradleWrapper:
+      version: ^7.4
+      addIfMissing: false
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.4.org.openrewrite.java.ChangeType
+recipeList:
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: org.springframework.util.concurrent.ListenableFuture
+      newFullyQualifiedTypeName: java.util.concurrent.CompletableFuture
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.5.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-atlas-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.6.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-bom
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.7.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-commons
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.8.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-core
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.9.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-datadog-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.10.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-docs-generator
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.11.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-ganglia-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.12.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-graphite-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.13.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-influx-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.14.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-jakarta9
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.15.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-jersey2
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.16.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-jetty11
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.17.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-jmx-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.18.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-observation
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.19.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-observation-test
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.20.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-osgi-test
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.21.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-prometheus-starter
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.22.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-appoptics
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.23.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-atlas
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.24.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-azure-monitor
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.25.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-cloudwatch
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.26.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-cloudwatch2
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.27.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-datadog
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.28.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-dynatrace
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.29.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-elastic
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.30.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-ganglia
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.31.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-graphite
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.32.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-health
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.33.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-humio
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.34.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-influx
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.35.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-jmx
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.36.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-kairos
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.37.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-new-relic
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.38.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-opentsdb
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.39.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-otlp
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.40.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-prometheus
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.41.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-signalfx
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.42.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-stackdriver
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.43.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-statsd
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.44.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-registry-wavefront
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.45.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-samples
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.46.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-spring-legacy
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.47.org.openrewrite.java.dependencies.UpgradeDependencyVersion
+recipeList:
+  - org.openrewrite.java.dependencies.UpgradeDependencyVersion:
+      groupId: io.micrometer
+      artifactId: micrometer-test
+      newVersion: 1.10.x
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.48.org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_0
+recipeList:
+  - org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_0
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.49.org.openrewrite.maven.AddDependency
+recipeList:
+  - org.openrewrite.maven.AddDependency:
+      groupId: jakarta.xml.bind
+      artifactId: jakarta.xml.bind-api
+      version: latest.release
+      onlyIfUsing: javax.xml.bind..*
+      acceptTransitive: false
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: dynamic.50.org.openrewrite.text.FindAndReplace
+recipeList:
+  - org.openrewrite.text.FindAndReplace:
+      find: java-1.8.0-openjdk-amd64
+      replace: java-1.17.0-openjdk-amd64
+      filePattern: .gitlab-ci.yml
